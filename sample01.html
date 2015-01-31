@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+  <head>
+    <script src="angular.min.js"></script>
+  </head>
+  <body>
+    <input type="number" ng-model="num" />
+    <button ng-click="num = num * 2">Twice Button</button>
+    <div ng-show="num != null && num % 3 != 0">1 + {{num}} = {{1+num}}</div>
+  </body>
+</html>
