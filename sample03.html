@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+  <head>
+    <script src="angular.min.js"></script>
+    <script src="sample03.js"></script>
+  </head>
+  <body>
+    <div ng-controller="MainCtrl">
+      <input type="text" ng-model="name" />
+      <div>Hello, {{name | uppercase}}!</div>
+    </div>
+    <div ng-controller="SecondCtrl">
+      {{now | date:'yyyy年MM月dd日 HH時mm分ss秒' }}
+    </div>
+    <div ng-controller="ThirdCtrl">
+      <input type="text" ng-model="searchText" />
+      <div>{{names | filter:searchText | json}}</div>
+    </div>
+    <div ng-controller="FourthCtrl">
+      <input type="text" ng-model="name" />
+      <div>{{name | reverse | uppercase}}</div>
+      <div>{{name | truncate:5}}</div>
+      <div>{{name | truncate:3:'---'}}</div>
+    </div>
+  </body>
+</html>
